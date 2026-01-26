@@ -38,8 +38,8 @@
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [
-    "F:/Coding/SEDS/liquidsDaq1/liquidsDaq/include",
-    "F:/Coding/SEDS/liquidsDaq1/liquidsDaq/src",
+    "F:/Coding/STM32/stm32TestFiles/include",
+    "F:/Coding/STM32/stm32TestFiles/src",
     "C:/Users/marci/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
     "C:/Users/marci/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
     "C:/Users/marci/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/inc",
