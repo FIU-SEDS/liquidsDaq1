@@ -8,6 +8,7 @@
 DHT dht(MUX_COM_PIN, DHTTYPE);
 
 void setup() {
+    analogReadResolution(12);
     pinMode(SWITCH_PIN_A, OUTPUT);
     dht.begin();
     Serial.begin(9600);
@@ -17,11 +18,13 @@ void loop() {
     digitalWrite(SWITCH_PIN_A, HIGH);
     float t = dht.readTemperature();
     float h = dht.readHumidity();
-    Serial.print("Temp: "); Serial.print(t); Serial.println("°C");
-    Serial.print("Humidity: "); Serial.println(h);
-    delay(500);
+    // Serial.print("Temp: "); Serial.print(t); Serial.println("°C");
+    // Serial.print("Humidity: "); Serial.println(h);
+    delay(10);
 
     digitalWrite(SWITCH_PIN_A, LOW);
+    //float voltage = (analogRead(MUX_COM_PIN) * 3.3) / 4095.0;
     Serial.println(analogRead(MUX_COM_PIN));
-    delay(500);
+    // Serial.println();
+    delay(10);
 }
