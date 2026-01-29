@@ -17,10 +17,52 @@ void setup() {
     digitalWrite(SWITCH_PIN_C, LOW);
 }
 
+void selectChannel(int channel){
+    if(channel == 0){
+        digitalWrite(SWITCH_PIN_A, LOW);
+        digitalWrite(SWITCH_PIN_B, LOW);
+        digitalWrite(SWITCH_PIN_C, LOW);
+    } else if (channel == 1) {
+        digitalWrite(SWITCH_PIN_A, HIGH);
+        digitalWrite(SWITCH_PIN_B, LOW);
+        digitalWrite(SWITCH_PIN_C, LOW);
+    } else if (channel == 2) {
+        digitalWrite(SWITCH_PIN_A, LOW);
+        digitalWrite(SWITCH_PIN_B, HIGH);
+        digitalWrite(SWITCH_PIN_C, LOW);
+    } else if (channel == 3) {
+        digitalWrite(SWITCH_PIN_A, HIGH);
+        digitalWrite(SWITCH_PIN_B, HIGH);
+        digitalWrite(SWITCH_PIN_C, LOW);
+    } else if (channel == 4) {
+        digitalWrite(SWITCH_PIN_A, LOW);
+        digitalWrite(SWITCH_PIN_B, LOW);
+        digitalWrite(SWITCH_PIN_C, HIGH);
+    } else if (channel == 5) {
+        digitalWrite(SWITCH_PIN_A, HIGH);
+        digitalWrite(SWITCH_PIN_B, LOW);
+        digitalWrite(SWITCH_PIN_C, HIGH);
+    } else if (channel == 6) {
+        digitalWrite(SWITCH_PIN_A, LOW);
+        digitalWrite(SWITCH_PIN_B, HIGH);
+        digitalWrite(SWITCH_PIN_C, HIGH);
+    } else if (channel == 7) {
+        digitalWrite(SWITCH_PIN_A, HIGH);
+        digitalWrite(SWITCH_PIN_B, HIGH);
+        digitalWrite(SWITCH_PIN_C, HIGH);
+    }
+}
+
+void channelReset(){
+    digitalWrite(SWITCH_PIN_A, LOW);
+    digitalWrite(SWITCH_PIN_B, LOW);
+    digitalWrite(SWITCH_PIN_C, LOW);
+}
+
 void ledSwitch(){
     digitalWrite(LED_PIN, HIGH);
     // delay(100);
-    digitalWrite(LED_PIN, LOW);
+    // digitalWrite(LED_PIN, LOW);
     // delay(100);
 }
 
