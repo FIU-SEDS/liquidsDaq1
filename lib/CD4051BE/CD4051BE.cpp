@@ -25,25 +25,10 @@ void CD4051BE::channelReset(){
 
 void CD4051BE::selectChannel(int channel){
     channelReset(); 
+    
+    digitalWrite(_pinA, (channel & 1)); 
 
-    if (channel == 1) {
-        digitalWrite(_pinA, HIGH);
-    } else if (channel == 2) {
-        digitalWrite(_pinB, HIGH);
-    } else if (channel == 3) {
-        digitalWrite(_pinA, HIGH);
-        digitalWrite(_pinB, HIGH);
-    } else if (channel == 4) {
-        digitalWrite(_pinC, HIGH);
-    } else if (channel == 5) {
-        digitalWrite(_pinA, HIGH);
-        digitalWrite(_pinC, HIGH);
-    } else if (channel == 6) {
-        digitalWrite(_pinB, HIGH);
-        digitalWrite(_pinC, HIGH);
-    } else if (channel == 7) {
-        digitalWrite(_pinA, HIGH);
-        digitalWrite(_pinB, HIGH);
-        digitalWrite(_pinC, HIGH);
-    }
+    digitalWrite(_pinB, (channel & 2)); 
+
+    digitalWrite(_pinC, (channel & 4)); 
 }
